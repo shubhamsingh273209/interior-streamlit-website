@@ -1,10 +1,20 @@
 import streamlit as st
 
 st.set_page_config(page_title="TERRAWOOD.IN", layout="wide")
-
+# st.set_page_config(layout="wide")
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #F5F5F5;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.title("🏠 TERRAWOOD.IN")
 st.subheader("Designing Beautiful Homes in Delhi NCR,GURGAON,NOIDA")
-st.subheader("Contact us : +9198134723")
+st.subheader("✆ Contact us : +9198134723")
 st.subheader("Our Best Designer :Vikas Rana contact: +916207634535")
 
 st.image(
