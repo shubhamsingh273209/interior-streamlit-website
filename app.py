@@ -1,9 +1,11 @@
 import streamlit as st
 
-st.set_page_config(page_title="Interior Design Studio", layout="wide")
+st.set_page_config(page_title="TERRAWOOD.IN", layout="wide")
 
-st.title("🏠 Interior Design Studio")
-st.subheader("Designing Beautiful Homes in Delhi NCR")
+st.title("🏠 TERRAWOOD.IN")
+st.subheader("Designing Beautiful Homes in Delhi NCR,GURGAON,NOIDA")
+st.subheader("Contact us : +9198134723")
+st.subheader("Our Best Designer :Vikas Rana contact: +916207634535")
 
 st.image(
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
