@@ -6,7 +6,10 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #F5F5F5;
+        background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     </style>
     """,
