@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="3D DESIGN STUDIO", layout="wide")
 # st.set_page_config(layout="wide")
-st.set_page_config(page_title=" BY :- VIKASH KUMAR RANA"
+st.set_page_config(page_title=" BY :- VIKASH KUMAR RANA")
 st.markdown(
     """
     <style>
