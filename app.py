@@ -25,29 +25,33 @@ st.markdown(
     }
 
     /* -------- IMAGE SLIDER -------- */
-    .slider {
-        overflow: hidden;
-        white-space: nowrap;
-        width: 100%;
-        margin-top: 40px;
-    }
+     .slider {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+}
 
-    .slide-track {
-        display: inline-block;
-        animation: scroll 40s linear infinite;
-    }
+.slide-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
 
-    .slide-track img {
-        height: 260px;
-        margin-right: 20px;
-        border-radius: 15px;
-        box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
-    }
+.slide-track img {
+    height: 260px;
+    margin-right: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+}
 
-    @keyframes scroll {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
     h1, h2, h3, p, label {
         color: white;
