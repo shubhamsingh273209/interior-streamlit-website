@@ -34,7 +34,7 @@ st.markdown(
 
     .slide-track {
         display: inline-block;
-        animation: scroll 25s linear infinite;
+        animation: scroll 40s linear infinite;
     }
 
     .slide-track img {
