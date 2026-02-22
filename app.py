@@ -18,7 +18,7 @@ st.markdown(
 
     /* Overlay for readability */
     .overlay {
-        background: rgba(0,0,0,0.55);
+        background:#F5F1EB;
         padding: 30px;
         border-radius: 20px;
         margin-top: 20px;
