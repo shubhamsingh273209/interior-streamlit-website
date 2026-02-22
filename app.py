@@ -17,7 +17,6 @@ st.markdown(
         url("https://scontent-del2-3.cdninstagram.com/v/t51.2885-19/639668153_18071049152536885_8485514174942539167_n.jpg");
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
         background-attachment: fixed;
     }
 
@@ -56,8 +55,15 @@ st.markdown(
     }
 
     /* TEXT COLORS */
-    h1, h2, h3 {
-        color: #C8A165;;   /* premium dark grey */
+    h1 {
+        color: #C8A165;   /* GOLD TITLE */
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    h3 {
+        color: #2C2C2C;   /* DARK SUBHEADER */
+        font-weight: 600;
     }
 
     p, li, label {
@@ -67,7 +73,7 @@ st.markdown(
 
     /* BUTTON STYLE */
     .stButton > button {
-        background-color: #C8A165; /* gold */
+        background-color: #C8A165;
         color: white;
         border-radius: 12px;
         padding: 10px 30px;
@@ -112,7 +118,7 @@ images = [
     img_to_base64("WhatsApp Image 2026-02-19 at 16.42.13.jpeg"),
     img_to_base64("WhatsApp Image 2026-02-19 at 16.42.10.jpeg"),
     img_to_base64("WhatsApp Image 2026-02-19 at 16.42.23.jpeg"),
-] * 2   # duplicate for seamless loop
+] * 2   # duplicate for smooth loop
 
 slider_html = """
 <div class="slider">
