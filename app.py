@@ -83,8 +83,8 @@ def img_to_base64(path):
 images = [
     img_to_base64("WhatsApp Image 2026-02-19 at 16.42.19.jpeg"),
     img_to_base64("WhatsApp Image 2026-02-19 at 16.42.13.jpeg"),
-    img_to_base64("img3.jpg"),
-    img_to_base64("img4.jpg"),
+    img_to_base64("WhatsApp Image 2026-02-19 at 16.42.10.jpeg"),
+    img_to_base64("WhatsApp Image 2026-02-19 at 16.42.23.jpeg"),
 ]
 
 slider_html = """
