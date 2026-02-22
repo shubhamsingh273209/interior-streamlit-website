@@ -22,7 +22,7 @@ st.subheader("Designing Beautiful Homes in Delhi NCR,GURGAON,NOIDA")
 st.subheader("Our Best Designer :Vikas Rana contact: +916207634535")
 
 st.image(
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    "WhatsApp Image 2026-02-19 at 16.42.10.jpeg",
     use_column_width=True
 )
 
