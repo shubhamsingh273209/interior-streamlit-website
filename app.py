@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 
 # ---------------- PAGE CONFIG ----------------
-st.set_page_config(page_title="3D DESIGN STUDIO", layout="wide")
+st.set_page_config(page_title="3D DESIGN STUDIO",page_title_color="black", layout="wide")
 
 # ---------------- BACKGROUND + COLORS ----------------
 st.markdown(
