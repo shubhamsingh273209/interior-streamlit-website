@@ -1,40 +1,132 @@
-import streamlit as st
+ import streamlit as st
+import base64
 
+# ---------------- PAGE CONFIG ----------------
 st.set_page_config(page_title="3D DESIGN STUDIO", layout="wide")
-# st.set_page_config(layout="wide")
-st.set_page_config(page_title=" BY :- VIKASH KUMAR RANA")
+
+# ---------------- BACKGROUND IMAGE ----------------
 st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://scontent-del2-3.cdninstagram.com/v/t51.2885-19/639668153_18071049152536885_8485514174942539167_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-del2-3.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2QHNQY7z_BcT1MfPVlwOX0erc582JOYSp0QRMu4TdWTHn_38Ysplam8Xpj4Edpk1Myc&_nc_ohc=gnyDjk1_Q9MQ7kNvwGTDfWi&_nc_gid=QmkEzHndhk8LULmxiYE6FQ&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AftM_aNJ2yj6vIDRGfWz1ckh-tdUsSVC4_TjCvsnrTM1Qg&oe=699F417F&_nc_sid=7a9f4b");
+        background-image: url("https://scontent-del2-3.cdninstagram.com/v/t51.2885-19/639668153_18071049152536885_8485514174942539167_n.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* Overlay for readability */
+    .overlay {
+        background: rgba(0,0,0,0.55);
+        padding: 30px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    /* -------- IMAGE SLIDER -------- */
+    .slider {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .slide-track {
+        display: inline-block;
+        animation: scroll 25s linear infinite;
+    }
+
+    .slide-track img {
+        height: 260px;
+        margin-right: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+    }
+
+    @keyframes scroll {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+
+    h1, h2, h3, p, label {
+        color: white;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
-st.title("3D DESIGN STUDIO")
-st.subheader("Designing Beautiful Homes in Delhi NCR,GURGAON,NOIDA")
-# st.subheader("✆ Contact us : +9198134723")
-st.subheader("Our Best Designer :Vikas Rana contact: +916207634535")
 
+# ---------------- HERO SECTION ----------------
+st.markdown(
+    """
+    <div class="overlay">
+        <h1>3D DESIGN STUDIO</h1>
+        <h3>Designing Beautiful Homes in Delhi NCR, Gurgaon, Noida</h3>
+        <p><b>Our Best Designer:</b> Vikas Rana | 📞 +91 6207634535</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# ---------------- MAIN IMAGE ----------------
 st.image(
     "WhatsApp Image 2026-02-19 at 16.42.10.jpeg",
     use_column_width=True
 )
 
-st.markdown("""
-### Our Services
-- Modular Kitchen
-- Wardrobe Design
-- Living Room Interiors
-- Full Home Renovation
-""")
+# ---------------- IMAGE SLIDER ----------------
+def img_to_base64(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
 
-st.markdown("### 📞 Get Free Consultation")
+images = [
+    img_to_base64("img1.jpg"),
+    img_to_base64("img2.jpg"),
+    img_to_base64("img3.jpg"),
+    img_to_base64("img4.jpg"),
+]
+
+slider_html = """
+<div class="slider">
+    <div class="slide-track">
+"""
+
+for img in images:
+    slider_html += f'<img src="data:image/jpg;base64,{img}"/>'
+
+slider_html += """
+    </div>
+</div>
+"""
+
+st.markdown(slider_html, unsafe_allow_html=True)
+
+# ---------------- SERVICES ----------------
+st.markdown(
+    """
+    <div class="overlay">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Modular Kitchen</li>
+            <li>Wardrobe Design</li>
+            <li>Living Room Interiors</li>
+            <li>Full Home Renovation</li>
+        </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# ---------------- CONTACT FORM ----------------
+st.markdown(
+    """
+    <div class="overlay">
+        <h2>📞 Get Free Consultation</h2>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 name = st.text_input("Your Name")
 phone = st.text_input("Phone Number")
