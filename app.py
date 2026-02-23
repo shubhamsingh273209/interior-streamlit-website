@@ -164,6 +164,7 @@ st.markdown(
 name = st.text_input("Your Name")
 phone = st.text_input("Phone Number")
 city = st.selectbox("City", ["Delhi", "Gurugram", "Noida"])
+Location=st.text_input("LOCATION")
 
 if st.button("Submit"):
     st.success("Thank you! We will contact you soon.")
