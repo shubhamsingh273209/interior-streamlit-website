@@ -96,7 +96,7 @@ st.markdown(
     <div class="overlay">
         <h1>3D DESIGN STUDIO</h1>
         <h3>Designing Beautiful Homes in Delhi NCR, Gurgaon, Noida</h3>
-        <p><b>Our Best Designer:</b> Vikas Rana | 📞 +91 6207634535</p>
+        <p><b>Our Best Designer:</b> Vikash Rana | 📞 +91 6207634535</p>
     </div>
     """,
     unsafe_allow_html=True
